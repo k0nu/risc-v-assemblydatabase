@@ -1,0 +1,15 @@
+    .data
+    .text
+    .globl main
+
+main:
+    li t0, 7          # Lade 7 in t0 (Beispielwert)
+
+    add t1, t0, t0    # t1 = 2 * t0
+    add t1, t1, t1    # t1 = 4 * t0
+    add t1, t1, t1    # t1 = 8 * t0
+    add t1, t1, t0    # t1 = 8*t0 + t0 = 9*t0
+
+    # Programmende (z. B. für Spike oder RARS)
+    li a7, 10
+    ecall
